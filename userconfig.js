@@ -3,7 +3,7 @@ let saved_config = JSON.parse(localStorage.getItem("CONFIG"));
 const default_config = {
   overrideStorage: true,
   temperature: {
-    location: 'Toronto, Canada',
+    location: 'Matão, São Paulo',
     scale: "C",
   },
   clock: {
@@ -39,7 +39,7 @@ const default_config = {
               name: "musicForProgramming();",
               url: "https://musicforprogramming.net",
               icon: "binary-tree",
-              icon_color: palette.peach,
+              icon_color: "#fe640b",
             },
           ],
         },
@@ -50,19 +50,19 @@ const default_config = {
               name: "outlook",
               url: "https://outlook.office365.com/mail/",
               icon: "mail",
-              icon_color: palette.green,
+              icon_color: "#40a02b",
             },
             {
               name: "calendar",
               url: "https://calendar.google.com",
               icon: "calendar-filled",
-              icon_color: palette.peach,
+              icon_color: "#fe640b",
             },
             {
               name: "iCloud",
               url: "https://drive.google.com/drive/home",
               icon: "cloud",
-              icon_color: palette.blue,
+              icon_color: "#1e66f5",
             },
           ],
         },
@@ -73,13 +73,13 @@ const default_config = {
               name: "bbc",
               url: "https://www.bbc.com/news",
               icon: "news",
-              icon_color: palette.green,
+              icon_color: "#40a02b",
             },
             {
               name: "cnn",
               url: "https://www.cnn.com/",
               icon: "badge-filled",
-              icon_color: palette.peach,
+              icon_color: "#fe640b",
             },
           ],
         },
@@ -96,13 +96,13 @@ const default_config = {
               name: "github",
               url: "https://github.com",
               icon: "brand-github",
-              icon_color: palette.green,
+              icon_color: "#40a02b",
             },
             {
               name: "stackoverflow",
               url: "https://stackoverflow.com",
               icon: "brand-stackoverflow",
-              icon_color: palette.red,
+              icon_color: "#d20f39",
             },
           ],
         },
@@ -113,25 +113,25 @@ const default_config = {
               name: "kaggle",
               url: "https://www.kaggle.com",
               icon: "brain",
-              icon_color: palette.green,
+              icon_color: "#40a02b",
             },
             {
               name: "leetcode",
               url: "https://leetcode.com",
               icon: "code-plus",
-              icon_color: palette.peach,
+              icon_color: "#fe640b",
             },
             {
               name: "exercism",
               url: "https://exercism.org",
               icon: "code-minus",
-              icon_color: palette.red,
+              icon_color: "#d20f39",
             },
             {
               name: "aoc",
               url: "https://adventofcode.com",
               icon: "brand-linktree",
-              icon_color: palette.blue,
+              icon_color: "#1e66f5",
             },
           ],
         }
@@ -148,13 +148,13 @@ const default_config = {
               name: "instagram",
               url: "https://instagram.com",
               icon: "brand-instagram",
-              icon_color: palette.green,
+              icon_color: "#40a02b",
             },
             {
               name: "youtube",
               url: "https://youtube.com",
               icon: "brand-youtube",
-              icon_color: palette.peach,
+              icon_color: "#fe640b",
             }
           ],
         },
@@ -165,13 +165,13 @@ const default_config = {
               name: "youtube",
               url: "https://www.youtube.com",
               icon: "brand-youtube",
-              icon_color: palette.peach,
+              icon_color: "#fe640b",
             },
             {
               name: "netflix",
               url: "https://netflix.com",
               icon: "brand-netflix",
-              icon_color: palette.red,
+              icon_color: "#d20f39",
             },
           ],
         },
@@ -181,13 +181,13 @@ const default_config = {
 };
 
 const CONFIG = new Config(saved_config ?? default_config);
-// const CONFIG = new Config(default_config);
-
-(function() {
-  var css = document.createElement('link');
-  css.href = 'src/css/tabler-icons.min.css';
-  css.rel = 'stylesheet';
-  css.type = 'text/css';
-  if (!CONFIG.config.localIcons)
-    document.getElementsByTagName('head')[0].appendChild(css);
-})();
+ // const CONFIG = new Config(default_config);
+ 
+ (function() {
+   var css = document.createElement('link');
+   css.href = 'src/css/tabler-icons.min.css';
+   css.rel = 'stylesheet';
+   css.type = 'text/css';
+   if (!CONFIG.config.localIcons)
+     document.getElementsByTagName('head')[0].appendChild(css);
+ })();
